@@ -1,12 +1,9 @@
 import React, { Component } from "react";
-import { Layout } from "antd";
+import { Layout, Row, Col} from "antd";
 import { Switch, Route } from "react-router-dom";
-
-import SideMenu from "./Components/SideMenu";
+import Timeline from "./Components/Timeline/TimeLineElements";
 import Hero from "./Components/Hero";
 import Footer from "./Components/Footer";
-import About from './Components/About';
-import Blog from './Components/Blog';
 import Contact from './Components/Contact';
 
 import "./App.css";
@@ -45,8 +42,18 @@ export class App extends Component {
     return (
       <div>
         <Hero View={this.BringInView}></Hero>
-        <Layout>
-          <Footer />
+        <Layout style={{ minHeight: "100vh" }}>
+
+            <Layout>
+              <Content>
+                <Row>
+                  <Col lg={4}>
+                    <Timeline />
+                  </Col>
+                </Row>
+              </Content>
+              <Footer />
+            </Layout>
         </Layout>
         {/* <Layout style={{ minHeight: "100vh" }}>
           <Sider

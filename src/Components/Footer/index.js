@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import {
   GithubOutlined,
   FacebookOutlined,
-  InstagramOutlined,
   LinkedinOutlined,
-  MediumOutlined,
   UpOutlined
 } from "@ant-design/icons";
 import { BackTop } from "antd";
