@@ -5,14 +5,13 @@ import TimelineItem from "@material-ui/lab/TimelineItem";
 import TimelineSeparator from "@material-ui/lab/TimelineSeparator";
 import TimelineConnector from "@material-ui/lab/TimelineConnector";
 import TimelineContent from "@material-ui/lab/TimelineContent";
-import TimelineOppositeContent from "@material-ui/lab/TimelineOppositeContent";
 import TimelineDot from "@material-ui/lab/TimelineDot";
-import LaptopMacIcon from "@material-ui/icons/LaptopMac";
-import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
-import { Divider, Image } from "antd";
-import ImportContactsOutlinedIcon from "@material-ui/icons/ImportContactsOutlined";
-import WorkOutlineOutlinedIcon from "@material-ui/icons/WorkOutlineOutlined";
+import { Image, Tooltip } from "antd";
+import {
+  CustomerServiceOutlined,
+  LaptopOutlined,
+  HomeOutlined
+} from "@ant-design/icons";
 import Fade from "react-reveal/Fade";
 import Zoom from 'react-reveal/Zoom';
 import Logo from '../../Images/Logo.png'
@@ -32,104 +31,57 @@ export default function CustomizedTimeline() {
 
   return (
     <Timeline align="">
+      <Image src={Logo}/> 
+
       <TimelineItem>
-        <TimelineOppositeContent>
-          <Typography
-            className="timeline-date"
-            variant="body2"
-            color="textSecondary"
-          >
-            <Image src={Logo}/>
-          </Typography>
-        </TimelineOppositeContent>
         <TimelineSeparator>
-          <Zoom top>
-            <TimelineDot className="timeline-icon">
-              <WorkOutlineOutlinedIcon />
-            </TimelineDot>
-          </Zoom>
           <TimelineConnector />
         </TimelineSeparator>
+        <TimelineContent></TimelineContent>
       </TimelineItem>
 
       <TimelineItem>
-        <TimelineOppositeContent>
-          <Typography
-            className="timeline-date"
-            variant="body2"
-            color="textSecondary"
-          >
-            June, 2021 - Present
-          </Typography>
-        </TimelineOppositeContent>
         <TimelineSeparator>
           <Zoom top>
-            <TimelineDot className="timeline-icon">
-              <WorkOutlineOutlinedIcon />
-            </TimelineDot>
+            <Tooltip placement="right" title={"About"}>
+              <TimelineDot className="timeline-icon">
+              <HomeOutlined />
+              </TimelineDot>
+            </Tooltip>
           </Zoom>
           <TimelineConnector />
         </TimelineSeparator>
+        <TimelineContent></TimelineContent>
       </TimelineItem>
 
       <TimelineItem>
-        <TimelineOppositeContent>
-          <Typography
-            className="timeline-date"
-            variant="body2"
-            color="textSecondary"
-          >
-            June, 2021 - Present
-          </Typography>
-        </TimelineOppositeContent>
         <TimelineSeparator>
           <Zoom top>
-            <TimelineDot className="timeline-icon">
-              <WorkOutlineOutlinedIcon />
-            </TimelineDot>
+            <Tooltip placement="right" title={"Services"}>
+              <TimelineDot className="timeline-icon">
+              <LaptopOutlined />
+              </TimelineDot>
+            </Tooltip>
           </Zoom>
           <TimelineConnector />
         </TimelineSeparator>
+        <TimelineContent></TimelineContent>
       </TimelineItem>
 
-      <TimelineItem>
-        <TimelineOppositeContent>
-          <Typography
-            className="timeline-date"
-            variant="body2"
-            color="textSecondary"
-          >
-            March, 2020 - Sept, 2020
-          </Typography>
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <Zoom top>
-            <TimelineDot className="timeline-icon">
-              <LaptopMacIcon />
-            </TimelineDot>
-          </Zoom>
-          <TimelineConnector />
-        </TimelineSeparator>
-      </TimelineItem>
+      
 
       <TimelineItem>
-        <TimelineOppositeContent>
-          <Typography
-            className="timeline-date"
-            variant="body2"
-            color="textSecondary"
-          >
-            Jan, 2020 - May, 2020
-          </Typography>
-        </TimelineOppositeContent>
         <TimelineSeparator>
           <Zoom top>
-            <TimelineDot className="timeline-icon">
-              <LaptopMacIcon />
-            </TimelineDot>
+            <Tooltip placement="right" title={"Contact"}>
+              <TimelineDot className="timeline-icon">
+              <CustomerServiceOutlined />
+              </TimelineDot>
+            </Tooltip>
           </Zoom>
-          <TimelineConnector />
+          {/* <TimelineConnector /> */}
         </TimelineSeparator>
+        <TimelineContent></TimelineContent>
       </TimelineItem>
     </Timeline>
   );
