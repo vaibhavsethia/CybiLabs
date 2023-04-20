@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import { Layout, Row, Col, Divider} from "antd";
+import { Layout, Row, Col, Divider, Input} from "antd";
 import Timeline from "./Components/Timeline/TimeLineElements";
 import Hero from "./Components/Hero";
 import Footer from "./Components/Footer";
-import Contact from './Components/Contact';
 import {
   UserOutlined,
   LaptopOutlined,
@@ -13,6 +12,7 @@ import "./App.css";
 import { Rotate } from "react-reveal";
 
 const { Content } = Layout;
+const { TextArea } = Input;
 
 export class App extends Component {
   constructor(props) {
@@ -56,7 +56,7 @@ export class App extends Component {
                   </Col>
                   <Col lg={20} className="content">
                     <div className="tc pa3 mb2 header">
-                      <Rotate top left cascade><span className="green-bold b">Who</span> are we ?</Rotate>
+                      <span className="green-bold b">Who</span> are we ?
                     </div>
 
                     <p className="f3 tc">
@@ -121,13 +121,68 @@ export class App extends Component {
                     
                     <Divider className="home-divider"/>
                     
-                    <div className="tc pa3 mb2 header">
-                      <Rotate top left cascade><span className="green-bold b">What</span> do we do ?</Rotate>
+                    {/* <div className="tc pa3 mb2 header">
+                      <span className="green-bold b">What</span> do we do ?
                     </div>
 
-                    <div className="tc pa3 mb2 header">
-                      <Rotate top left cascade><span className="green-bold b">Request</span> a consultation</Rotate>
+                    <Divider className="home-divider"/> */}
+
+                    {/* <div className="tc pa3 mb2 header">
+                      <span className="green-bold b">Request</span> a consultation
                     </div>
+
+                    <Row>
+                    <Col md={12} sm={24}>
+                        <p className="f3 b">
+                          Send us a <span className="green-bold">message</span> and we will be in <span className="green-bold">touch</span>.
+                        </p>
+
+                        <div className="request-box ml2 mr2">
+                        <form className="contact-form" onSubmit={this.sendEmail}>
+                          <div className="form-label pa2 mb3 tl">
+                            Name :{" "}
+                            <Input
+                              className="name-box"
+                              type="text"
+                              name="user_name"
+                              placeholder="Enter your name"
+                              required
+                            />
+                          </div>
+                          <div className="form-label pa2 mb3 tl">
+                            Email :{" "}
+                            <Input
+                              className="mail-box"
+                              type="email"
+                              name="user_email"
+                              placeholder="Enter your mailing address"
+                              required
+                            />{" "}
+                          </div>
+                          <div className="form-label pa2 mb3 tl v-top">
+                            Message :{" "}
+                            <TextArea
+                              className="message-box"
+                              type="text"
+                              name="message"
+                              placeholder="Enter your message"
+                              required
+                            />
+                          </div>
+                          <input
+                            className="submit-button"
+                            type="submit"
+                            value="Send Message"
+                          />
+                        </form>
+                        </div>
+                      </Col>
+                      <Col md={12} sm={24}>
+                        <p className="">
+                          
+                        </p>
+                      </Col>
+                    </Row> */}
                   </Col>
                 </Row>
               </Content>
