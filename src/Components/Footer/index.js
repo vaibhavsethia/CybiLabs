@@ -22,7 +22,7 @@ export class Footer extends Component {
         </BackTop>
         <br />
         <a
-          href="https://github.com/vaibhavsethia"
+          href=""
           className="icons-footer pa2 f3 fw1 pt2 pb1"
           style={{ color: "white" }}
           target="_blank"
@@ -30,7 +30,7 @@ export class Footer extends Component {
           <GithubOutlined />
         </a>
         <a
-          href="https://www.facebook.com/coolvaibhavsethia"
+          href=""
           className="icons-footer pa2 f3 fw1 pt2 pb1"
           style={{ color: "white" }}
           target="_blank"
@@ -38,31 +38,15 @@ export class Footer extends Component {
           <FacebookOutlined />
         </a>
         <a
-          href="https://www.instagram.com/vaibhav_9_8/"
-          className="icons-footer pa2 f3 fw1 pt2 pb1"
-          style={{ color: "white" }}
-          target="_blank"
-        >
-          <InstagramOutlined />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/vaibhav-sethia-4711b8145/"
+          href=""
           className="icons-footer pa2 f3 fw1 pt2 pb1"
           style={{ color: "white" }}
           target="_blank"
         >
           <LinkedinOutlined />
         </a>
-        <a
-          href="https://medium.com/@vaibhavsethia1998"
-          className="icons-footer pa2 f3 fw1 pt2 pb1"
-          style={{ color: "white" }}
-          target="_blank"
-        >
-          <MediumOutlined />
-        </a>
         <br />
-        <span className="cpright">Vaibhav Sethia © 2020</span>
+        <span className="cpright"><a className="footer-links">Terms Of Use</a> <span className="bar-footer">|</span> Cybilabs © 2023 <span className="bar-footer">|</span> <a className="footer-links">Privacy Policy</a></span>
       </div>
     );
   }

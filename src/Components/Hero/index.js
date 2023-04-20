@@ -16,6 +16,7 @@ export class Hero extends Component {
           height="100vh"
           params={{
             particles: {
+              color: '#3f918d',
               number: {
                 value: 300,
                 density: {
@@ -60,14 +61,14 @@ export class Hero extends Component {
         />
         <div className="hero-content tc">
           <Fade left big cascade>
-            Hello, I'm <span className="hero-content-2">Vaibhav Sethia</span>
+            Turn your <span className="hero-content-2">Ideas</span>
           </Fade>
           <Fade right big cascade>
-            I'm a full-stack developer.
+            into reality !
           </Fade>
           <Link to="/Portfolio_new/">
             <Button onClick={this.props.View}>
-              <span className="button-text">View my work</span>
+              <span className="button-text">This is how ?</span>
               <RightOutlined className="button-right" />
               <DownOutlined className="button-down" />
             </Button>

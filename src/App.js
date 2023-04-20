@@ -45,7 +45,10 @@ export class App extends Component {
     return (
       <div>
         <Hero View={this.BringInView}></Hero>
-        <Layout style={{ minHeight: "100vh" }}>
+        <Layout>
+          <Footer />
+        </Layout>
+        {/* <Layout style={{ minHeight: "100vh" }}>
           <Sider
             width={300}
             collapsible
@@ -64,7 +67,7 @@ export class App extends Component {
             </Content>
             <Footer />
           </Layout>
-        </Layout>
+        </Layout> */}
       </div>
     );
   }

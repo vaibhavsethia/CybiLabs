@@ -1,6 +1,7 @@
 .footer-section {
-  background-color: black;
+  background-color: rgb(17, 17, 17);
   padding: 10px;
+  border-top: 1px solid #3f918d;
 }
 .cpright {
   color: #bebebe;
@@ -23,4 +24,14 @@
 }
 .back-top-footer {
   opacity: 0.4 !important;
-  }
+}
+.bar-footer{
+  color: #3f918d;
+  font-size: 18px;
+}
+.footer-links{
+  color: #bebebe;
+}
+.footer-links:hover{
+  color: #3f918d;
+}
