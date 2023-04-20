@@ -5,8 +5,12 @@ import Hero from "./Components/Hero";
 import Footer from "./Components/Footer";
 import {
   UserOutlined,
+  AntCloudOutlined,
+  AreaChartOutlined,
   LaptopOutlined,
-  HomeOutlined
+  ClusterOutlined,
+  MenuUnfoldOutlined,
+  AuditOutlined
 } from "@ant-design/icons";
 import "./App.css";
 import { Rotate } from "react-reveal";
@@ -68,8 +72,7 @@ export class App extends Component {
                           Looking to turn your innovative ideas into reality? Choose Cybilabs - 
                           the premier software consultancy company that can bring your visions to life. 
                           Our team of experienced and skilled professionals work closely with our clients 
-                          from initial consultation to the final product launch, to ensure their vision is brought to 
-                          life with precision and efficiency. Our team stays up-to-date with the latest trends and technologies, 
+                          from initial consultation to the final product launch. Our team stays up-to-date with the latest trends and technologies, 
                           allowing us to provide cutting-edge solutions tailored to meet the unique needs of each client. 
                           We understand that every project is different, and we approach each one with a fresh perspective to ensure 
                           the best possible outcome.
@@ -95,7 +98,7 @@ export class App extends Component {
                             <UserOutlined className="icons"/>
                           </Col>
                           <Col>
-                            <span className="f3 b">Technology Analaysis</span>
+                            <span className="f3 b">Technology Analysis</span>
                           </Col>
                         </Row>
                         <p className="pl5">
@@ -121,11 +124,21 @@ export class App extends Component {
                     
                     <Divider className="home-divider"/>
                     
-                    {/* <div className="tc pa3 mb2 header">
+                    <div className="tc pa3 mb2 header">
                       <span className="green-bold b">What</span> do we do ?
                     </div>
-
-                    <Divider className="home-divider"/> */}
+                    
+                    <Row gutter={16} className="pb2">
+                      <Col lg={8} md={12} sm={24}><Row><Col><AntCloudOutlined className="icons"/></Col><Col className="pt2 pl3"><span className="f3 b">Cloud Computing & DevOps</span></Col></Row></Col>
+                      <Col lg={8} md={12} sm={24}><Row><Col><AreaChartOutlined className="icons"/></Col><Col className="pt2 pl3"><span className="f3 b">Business Analytics</span></Col></Row></Col>
+                      <Col lg={8} md={12} sm={24}><Row><Col><LaptopOutlined className="icons"/></Col><Col className="pt2 pl3"><span className="f3 b">Full Stack Solutions</span></Col></Row></Col>
+                    </Row>
+                    <Row gutter={16} className="pb2">
+                    <Col lg={8} md={12} sm={24}><Row><Col><ClusterOutlined className="icons"/></Col><Col className="pt2 pl3"><span className="f3 b">AI & ML</span></Col></Row></Col>
+                    <Col lg={8} md={12} sm={24}><Row><Col><MenuUnfoldOutlined className="icons"/></Col><Col className="pt2 pl3"><span className="f3 b">Workflow Automation</span></Col></Row></Col>
+                    <Col lg={8} md={12} sm={24}><Row><Col><AuditOutlined className="icons"/></Col><Col className="pt2 pl3"><span className="f3 b">IOT Solutions</span></Col></Row></Col>
+                    </Row>
+                    <Divider className="home-divider"/>
 
                     {/* <div className="tc pa3 mb2 header">
                       <span className="green-bold b">Request</span> a consultation
