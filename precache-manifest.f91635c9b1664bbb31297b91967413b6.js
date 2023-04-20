@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "01962ca5f36f0098a665ada93fd872cb",
+    "revision": "74f1012f8aa08c8901a846282dfb450f",
     "url": "/CybiLabs/index.html"
   },
   {
-    "revision": "28ac7fb8d8c7a9ebfa4c",
+    "revision": "00baa72627b84f60ab83",
     "url": "/CybiLabs/static/css/2.9c31d165.chunk.css"
   },
   {
-    "revision": "92758c2f4e4051d35848",
-    "url": "/CybiLabs/static/css/main.0ce376e6.chunk.css"
+    "revision": "95e6648f6bfc725f3b5e",
+    "url": "/CybiLabs/static/css/main.029db6e6.chunk.css"
   },
   {
-    "revision": "28ac7fb8d8c7a9ebfa4c",
-    "url": "/CybiLabs/static/js/2.3a40f150.chunk.js"
+    "revision": "00baa72627b84f60ab83",
+    "url": "/CybiLabs/static/js/2.5446ff45.chunk.js"
   },
   {
     "revision": "96c1643d12252d1158f587a481dbf297",
-    "url": "/CybiLabs/static/js/2.3a40f150.chunk.js.LICENSE.txt"
+    "url": "/CybiLabs/static/js/2.5446ff45.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "92758c2f4e4051d35848",
-    "url": "/CybiLabs/static/js/main.cac4c10a.chunk.js"
+    "revision": "95e6648f6bfc725f3b5e",
+    "url": "/CybiLabs/static/js/main.9a719049.chunk.js"
   },
   {
     "revision": "b8667236323d9d74df49",
