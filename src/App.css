@@ -48,4 +48,15 @@
   height: 80vh;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  overflow-x: scroll;
+}
+.icons{
+  color: #3f918d !important;
+  font-size: 36px;
+  border: 3px solid #3f918d;
+  border-radius: 100%;
+  padding: 6px;
+}
+.green-bold{
+  color: #3f918d;
 }
