@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/CybiLabs/precache-manifest.f91635c9b1664bbb31297b91967413b6.js"
+  "/CybiLabs/precache-manifest.ea6695f33a760e85c6619659b07cf042.js"
 );
 
 self.addEventListener('message', (event) => {

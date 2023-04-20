@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "74f1012f8aa08c8901a846282dfb450f",
+    "revision": "31ea4e4d0a29005330ae555c4ac7e46a",
     "url": "/CybiLabs/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CybiLabs/static/css/2.9c31d165.chunk.css"
   },
   {
-    "revision": "95e6648f6bfc725f3b5e",
+    "revision": "99bd2b08ef9e55e00621",
     "url": "/CybiLabs/static/css/main.029db6e6.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CybiLabs/static/js/2.5446ff45.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "95e6648f6bfc725f3b5e",
-    "url": "/CybiLabs/static/js/main.9a719049.chunk.js"
+    "revision": "99bd2b08ef9e55e00621",
+    "url": "/CybiLabs/static/js/main.439922f9.chunk.js"
   },
   {
     "revision": "b8667236323d9d74df49",
