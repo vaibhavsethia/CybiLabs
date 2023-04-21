@@ -1,6 +1,7 @@
 .timeline-icon {
   color: white !important;
   background-color: #3f918d !important;
+  font-size: 24px;
 }
 .ant-divider-vertical {
   height: 1.5em !important;

@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function CustomizedTimeline() {
+export default function CustomizedTimeline(props) {
   const classes = useStyles();
 
   return (
@@ -44,8 +44,8 @@ export default function CustomizedTimeline() {
         <TimelineSeparator>
           <Zoom top>
             <Tooltip placement="right" title={"About"}>
-              <TimelineDot className="timeline-icon">
-              <HomeOutlined />
+              <TimelineDot onClick={() => props.MoveToSection('about-section')} className="timeline-icon">
+              <HomeOutlined className=""/>
               </TimelineDot>
             </Tooltip>
           </Zoom>
@@ -58,8 +58,8 @@ export default function CustomizedTimeline() {
         <TimelineSeparator>
           <Zoom top>
             <Tooltip placement="right" title={"Services"}>
-              <TimelineDot className="timeline-icon">
-              <LaptopOutlined />
+              <TimelineDot onClick={() => props.MoveToSection('service-section')} className="timeline-icon">
+              <LaptopOutlined className=""/>
               </TimelineDot>
             </Tooltip>
           </Zoom>
@@ -68,14 +68,12 @@ export default function CustomizedTimeline() {
         <TimelineContent></TimelineContent>
       </TimelineItem>
 
-      
-
       <TimelineItem>
         <TimelineSeparator>
           <Zoom top>
             <Tooltip placement="right" title={"Contact"}>
-              <TimelineDot className="timeline-icon">
-              <CustomerServiceOutlined />
+              <TimelineDot onClick={() => props.MoveToSection('contact-section')} className="timeline-icon">
+              <CustomerServiceOutlined className=""/>
               </TimelineDot>
             </Tooltip>
           </Zoom>
