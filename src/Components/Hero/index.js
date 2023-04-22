@@ -67,7 +67,7 @@ export class Hero extends Component {
             into reality !
           </Fade>
           <Link to="/Portfolio_new/">
-            <Button onClick={this.props.View}>
+            <Button onClick={() => this.props.MoveToSection('contact-section')} >
               <span className="button-text">This is how ?</span>
               <RightOutlined className="button-right" />
               <DownOutlined className="button-down" />

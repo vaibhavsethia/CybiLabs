@@ -46,7 +46,7 @@ export class Footer extends Component {
         <br />
         <span className="cpright"><a className="footer-links">Terms Of Use</a> <span className="bar-footer">|</span> Cybilabs © 2023 <span className="bar-footer">|</span> <a className="footer-links">Privacy Policy</a></span>
         <br />
-        <span className="cpright pb2">info@cybilabs.com</span>
+        {/* <span className="cpright pb2">info@cybilabs.com</span> */}
       </div>
     );
   }

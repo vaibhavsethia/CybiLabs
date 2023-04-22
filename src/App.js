@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Layout, Row, Col, Divider, Input} from "antd";
+import { Layout, Row, Col, Divider, Input, Button, Select} from "antd";
 import Timeline from "./Components/Timeline/TimeLineElements";
 import Hero from "./Components/Hero";
 import Footer from "./Components/Footer";
@@ -25,6 +25,10 @@ export class App extends Component {
 
     this.state = {
       isCollapsed: false,
+      fullName: '',
+      email: '',
+      service: '',
+      message: ''
     };
 
     // this.myRef = React.createRef();
@@ -60,7 +64,7 @@ export class App extends Component {
   render() {
     return (
       <div>
-        <Hero View={this.BringInView}></Hero>
+        <Hero MoveToSection={this.handleClickScroll}></Hero>
         <Layout style={{ minHeight: "100vh" }}>
 
             <Layout>
@@ -173,50 +177,62 @@ export class App extends Component {
                       <span id="contact-section" className="green-bold b">Request</span> a consultation
                     </div>
 
-                    <Row>
+                    <Row justify={'center'} align='middle' className="tc">
                     <Col md={12} sm={24}>
                         <p className="f3 b">
                           Send us a <span className="green-bold">message</span> and we will be in <span className="green-bold">touch</span>.
                         </p>
 
                         <div className="request-box ml2 mr2">
-                        <form className="contact-form" onSubmit={this.sendEmail}>
-                          <div className="form-label pa2 mb3 tl">
-                            Name :{" "}
-                            <Input
-                              className="name-box"
-                              type="text"
-                              name="user_name"
-                              placeholder="Enter your name"
-                              required
-                            />
-                          </div>
-                          <div className="form-label pa2 mb3 tl">
-                            Email :{" "}
-                            <Input
-                              className="mail-box"
-                              type="email"
-                              name="user_email"
-                              placeholder="Enter your mailing address"
-                              required
-                            />{" "}
-                          </div>
-                          <div className="form-label pa2 mb3 tl v-top">
-                            Message :{" "}
-                            <TextArea
-                              className="message-box"
-                              type="text"
-                              name="message"
-                              placeholder="Enter your message"
-                              required
-                            />
-                          </div>
-                          <input
-                            className="submit-button"
-                            type="submit"
-                            value="Send Message"
+                          <div className="f5 ml5 mb2 mt3 tl b">Full Name:</div>
+                          <Input
+                            className="name-box"
+                            type="text"
+                            style={{ width: 360  }}
+                            name="user_name"
+                            placeholder="Enter your name"
+                            required
+                            onChange={(e) => this.setState({ fullName: e.target.value })}
                           />
-                        </form>
+
+                          <div className="f5 ml5 mb2 mt3 tl b green-bold">Email ID:</div>
+                          <Input
+                            className="name-box"
+                            type="text"
+                            style={{ width: 360 }}
+                            name="user_name"
+                            placeholder="Enter your mailing address"
+                            required
+                            onChange={(e) => this.setState({ email: e.target.value })}
+                          />
+
+                          <div className="f5 ml5 mb2 mt3 tl b">Service: </div>
+                          <Select
+                            defaultValue="Smoothen"
+                            style={{ width: 360 }}
+                            // onChange={}
+                            className="name-box tl"
+                            options={[
+                              { value: 'Smoothen', label: "I don't know what I want, can you smoothen my business process?" },
+                              { value: "Have Idea", label: "I have an idea, not sure if that will work out" },
+                              { value: 'Full Idea', label: "I know exactly what I want, build it for me" },
+                              { value: 'Disabled', label: 'We do not require your service', disabled: true },
+                            ]}
+                            onChange={(e) => this.setState({ username: e })}
+                          />
+
+                          <div className="f5 ml5 mb2 mt3 tl b green-bold">Additional Message: </div>
+                          <TextArea
+                            className="name-box"
+                            type="text"
+                            style={{ width: 360 }}
+                            name="message"
+                            placeholder="Enter your message"
+                            required
+                            onChange={(e) => this.setState({ message: e.target.value })}
+                          />
+
+                          <Row justify={'center'} align='middle'  className="pt4"><Col><Button onClick={() => this.SendMail()} className="submit-button">Send Message</Button></Col></Row>
                         </div>
                       </Col>
                       <Col md={12} sm={24}>

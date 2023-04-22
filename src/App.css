@@ -80,10 +80,8 @@
   font-weight: 300;
 }
 .submit-button {
-  color: #3f918d;
-  border: 1px solid #3f918d;
-  background-color: transparent;
-  border-radius: 7px;
+  color: white !important;
+  background-color: #3f918d !important;
   padding: 7px 16px;
   font-family: "Work Sans", sans-serif;
   font-size: 16px;
@@ -91,8 +89,10 @@
   cursor: pointer;
 }
 .submit-button:hover {
-  color: white;
-  background-color: #3f918d;
+  color: #3f918d !important;
+  border: 1px solid #3f918d !important;
+  background-color: transparent !important;
+  border-radius: 7px;
 }
 .form-label {
   font-family: "Work Sans", sans-serif;

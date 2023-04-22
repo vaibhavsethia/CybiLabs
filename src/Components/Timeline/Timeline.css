@@ -3,6 +3,10 @@
   background-color: #3f918d !important;
   font-size: 24px;
 }
+.timeline-icon:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+}
 .ant-divider-vertical {
   height: 1.5em !important;
   border-left: 2px solid #3f918d !important;
