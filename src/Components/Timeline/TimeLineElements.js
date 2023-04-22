@@ -30,57 +30,88 @@ export default function CustomizedTimeline(props) {
   const classes = useStyles();
 
   return (
-    <Timeline align="">
-      <Image src={Logo}/> 
+    <div>
+      {
+        props.section === 'home' ?
+          <Timeline align="">
+            <Image src={Logo}/> 
 
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent></TimelineContent>
-      </TimelineItem>
+            <TimelineItem>
+              <TimelineSeparator>
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent></TimelineContent>
+            </TimelineItem>
 
-      <TimelineItem>
-        <TimelineSeparator>
-          <Zoom top>
-            <Tooltip placement="right" title={"About"}>
-              <TimelineDot onClick={() => props.MoveToSection('about-section')} className="timeline-icon">
-              <HomeOutlined className=""/>
-              </TimelineDot>
-            </Tooltip>
-          </Zoom>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent></TimelineContent>
-      </TimelineItem>
+            <TimelineItem>
+              <TimelineSeparator>
+                <Zoom top>
+                  <Tooltip placement="right" title={"About"}>
+                    <TimelineDot onClick={() => props.MoveToSection('about-section')} className="timeline-icon">
+                    <HomeOutlined className=""/>
+                    </TimelineDot>
+                  </Tooltip>
+                </Zoom>
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent></TimelineContent>
+            </TimelineItem>
 
-      <TimelineItem>
-        <TimelineSeparator>
-          <Zoom top>
-            <Tooltip placement="right" title={"Services"}>
-              <TimelineDot onClick={() => props.MoveToSection('service-section')} className="timeline-icon">
-              <LaptopOutlined className=""/>
-              </TimelineDot>
-            </Tooltip>
-          </Zoom>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent></TimelineContent>
-      </TimelineItem>
+            <TimelineItem>
+              <TimelineSeparator>
+                <Zoom top>
+                  <Tooltip placement="right" title={"Services"}>
+                    <TimelineDot onClick={() => props.MoveToSection('service-section')} className="timeline-icon">
+                    <LaptopOutlined className=""/>
+                    </TimelineDot>
+                  </Tooltip>
+                </Zoom>
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent></TimelineContent>
+            </TimelineItem>
 
-      <TimelineItem>
-        <TimelineSeparator>
-          <Zoom top>
-            <Tooltip placement="right" title={"Contact"}>
-              <TimelineDot onClick={() => props.MoveToSection('contact-section')} className="timeline-icon">
-              <CustomerServiceOutlined className=""/>
-              </TimelineDot>
-            </Tooltip>
-          </Zoom>
-          {/* <TimelineConnector /> */}
-        </TimelineSeparator>
-        <TimelineContent></TimelineContent>
-      </TimelineItem>
-    </Timeline>
+            <TimelineItem>
+              <TimelineSeparator>
+                <Zoom top>
+                  <Tooltip placement="right" title={"Contact"}>
+                    <TimelineDot onClick={() => props.MoveToSection('contact-section')} className="timeline-icon">
+                    <CustomerServiceOutlined className=""/>
+                    </TimelineDot>
+                  </Tooltip>
+                </Zoom>
+                {/* <TimelineConnector /> */}
+              </TimelineSeparator>
+              <TimelineContent></TimelineContent>
+            </TimelineItem>
+          </Timeline>
+        :
+        <Timeline align="">
+        <Image src={Logo}/> 
+  
+        <TimelineItem>
+          <TimelineSeparator>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent></TimelineContent>
+        </TimelineItem>
+  
+        <TimelineItem>
+          <TimelineSeparator>
+            <Zoom top>
+              <Tooltip placement="right" title={"Go to home"}>
+                <TimelineDot onClick={() => props.ChangeSection('home')} className="timeline-icon">
+                <HomeOutlined className=""/>
+                </TimelineDot>
+              </Tooltip>
+            </Zoom>
+            {/* <TimelineConnector /> */}
+          </TimelineSeparator>
+          <TimelineContent></TimelineContent>
+        </TimelineItem>
+      </Timeline>
+      }
+    </div>
+    
   );
 }

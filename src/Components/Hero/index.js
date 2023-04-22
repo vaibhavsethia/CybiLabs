@@ -66,13 +66,11 @@ export class Hero extends Component {
           <Fade right big cascade>
             into reality !
           </Fade>
-          <Link to="/Portfolio_new/">
-            <Button onClick={() => this.props.MoveToSection('contact-section')} >
-              <span className="button-text">This is how ?</span>
-              <RightOutlined className="button-right" />
-              <DownOutlined className="button-down" />
-            </Button>
-          </Link>
+          <Button onClick={() => this.props.MoveToSection('about-section')} >
+            <span className="button-text">This is how ?</span>
+            <RightOutlined className="button-right" />
+            <DownOutlined className="button-down" />
+          </Button>
         </div>
       </div>
     );
