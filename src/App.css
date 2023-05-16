@@ -114,3 +114,33 @@
 .name-box {
   width: 79.5% !important;
 }
+.testimonial-card {
+  background-color: #3f918c1a;
+  padding: 1.6rem;
+}
+.star{
+  color: rgb(224, 193, 20) !important;
+  font-size: 1.7rem;
+}
+.avatar{
+  border-color: #000000;
+  border-width: 1px;
+  border-style: solid;
+}
+.test-name {
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+.test-desig{
+  font-size: 16px;
+  line-height: 10px;
+}
+.test-quote{
+  font-size: 32px;
+  vertical-align: middle;
+  font-weight: bold;
+}
+.test-content{
+  font-size: 16px;
+  line-height: 24px;
+}

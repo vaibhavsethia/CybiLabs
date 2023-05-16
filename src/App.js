@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Layout, Row, Col, Divider, Input, Button, Select} from "antd";
+import { Layout, Row, Col, Divider, Input, Button, Select, Carousel} from "antd";
 import Timeline from "./Components/Timeline/TimeLineElements";
 import Hero from "./Components/Hero";
 import Footer from "./Components/Footer";
@@ -11,7 +11,8 @@ import {
   ApiOutlined,
   ClusterOutlined,
   MenuUnfoldOutlined,
-  AuditOutlined
+  AuditOutlined,
+  StarFilled
 } from "@ant-design/icons";
 import "./App.css";
 import Avatar, { genConfig } from 'react-nice-avatar'
@@ -22,6 +23,33 @@ const { TextArea } = Input;
 const Maleconfig = genConfig({ sex: "man" }) 
 const Femaleconfig = genConfig({ sex: "woman" }) 
 
+const TestimonialArray = [
+  {
+    name: 'Sean Zent',
+    organization: 'The Hang Loose Hut',
+    designation: 'Founder',
+    title: 'One stop solution for all my tech need',
+    content: "I don't know what I'd do without the team at Cybilabs - they are my one stop shop for all things tech. From my smallest IT related queries to full stack developent and everything in between, they always got the answers. The team is incredibly patient and goes out of his way to ensure that I understand everything. They are reliable, trustworthy, and a great resource to have on hand!",
+    star: 5,
+    config: Maleconfig
+  }, {
+    name: 'Rachel',
+    organization: '',
+    designation: '',
+    title: '6-star services',
+    content: "Working with Cybilabs has been an absolute pleasure. Their services are top-notch and their communication is always timely and professional. They have exceeded my expectations in all areas, from the quality of their work to the speed at which he completes tasks. I highly recommend giving them a try - you won't be disappointed!",
+    star: 5,
+    config: Femaleconfig
+  }, {
+    name: 'Ben',
+    organization: '',
+    designation: '',
+    title: 'They have a solution for everything',
+    content: "I have been working with Cybilabs for the past few months and they have been an absolute pleasure to work with. They are always willing to help out and has a solution for every problem that arises. They are incredibly knowledgeable and their expertise in tech is invaluable. I highly recommend them for any project!",
+    star: 4,
+    config: Maleconfig
+  },
+]
 export class App extends Component {
   
   constructor(props) {
@@ -196,7 +224,35 @@ export class App extends Component {
                         <span className="green-bold b">Hear</span> from our customers
                       </div>
 
-                      <Avatar style={{ width: '8rem', height: '8rem' }} {...Maleconfig} />
+                      <Row className="mb5" justify='center' align='middle' gutter={16}>
+                        <Col lg={2} md={1} sm={0}></Col>
+                        <Col className="br3 testimonial-card shadow-2" lg={20} md={22} sm={24}>
+                        <Carousel autoplay dots={false}>
+                          {
+                            TestimonialArray.map((testimonial) => <div>
+                              <Row align='top' justify='center'>
+                                <Col lg={4}><Avatar className="ml3 shadow-1 avatar" style={{ width: '7rem', height: '7rem' }} {...testimonial.config} /></Col>
+                                <Col className="mt2" lg={19} sm={20}>
+                                  <div className="test-name">{testimonial.name}</div>
+                                  <div className="test-desig mb3">{testimonial.designation}<span className="pl2 pr2 f3">|</span><span className="">{testimonial.organization}</span></div>
+                                  {
+                                    Array.from(Array(testimonial.star)).map(() => <StarFilled className="star"/>)
+                                  }
+                                  <div className="pt2" style={{lineHeight: '18px'}}>
+                                    <div className="f4 pb3 b">{testimonial.title}</div>
+                                    <span className="test-quote pr1">"</span>
+                                    <span className="test-content tr">{testimonial.content}</span>
+                                    <span className="test-quote pl1">"</span>
+                                  </div>
+                                </Col>
+                                <Col lg={1} sm={0}></Col>
+                              </Row>
+                            </div>)
+                          }
+                        </Carousel>
+                        </Col>
+                        <Col lg={2} md={1} sm={0}></Col>
+                      </Row>
 
                       {/* --------------- CONTACT ---------------*/}
                       <Divider className="home-divider"/>
@@ -206,7 +262,7 @@ export class App extends Component {
                       </div>
   
                       <Row justify={'center'} align='middle' className="tc">
-                      <Col md={12} sm={24}>
+                      <Col md={13} sm={24}>
                           <p className="f3 b">
                             Send us a <span className="green-bold">message</span> and we will be in <span className="green-bold">touch</span>.
                           </p>
@@ -267,7 +323,7 @@ export class App extends Component {
                             </Row>
                           </div>
                         </Col>
-                        <Col md={12} sm={24}>
+                        <Col md={11} sm={24}>
                           {/* <ReactGlobe /> */}
                         </Col>
                       </Row>
