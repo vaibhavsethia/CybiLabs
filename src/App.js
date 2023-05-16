@@ -64,7 +64,6 @@ export class App extends Component {
       section: 'home'
     };
 
-    // this.myRef = React.createRef();
     this.handleClickScroll = this.handleClickScroll.bind(this);
     this.UpdateSection = this.UpdateSection.bind(this);
 
@@ -111,12 +110,12 @@ export class App extends Component {
             <Layout>
               <Content>
                   <Row>
-                  <Col lg={4}>
+                  <Col lg={4} sm={0}>
                     <Timeline MoveToSection={this.handleClickScroll} section={this.state.section} ChangeSection={this.UpdateSection}/>
                   </Col>
                   {
                       this.state.section === 'home' ?
-                      <Col lg={20} className="content">
+                      <Col lg={20} sm={24} className="content pl4 pr4">
                       <div className="tc pa3 mb2 header">
                         <span id="about-section" className="green-bold b">Who</span> are we ?
                       </div>
@@ -126,7 +125,7 @@ export class App extends Component {
                       </p>
                       <Row gutter={16}>
                         <Col md={10} sm={24}>
-                          <p className="ml4 mr4 f4">
+                          <p className="f4">
                             Looking to turn your innovative ideas into reality? Choose Cybilabs - 
                             the premier software consultancy company that can bring your visions to life. 
                             Our team of experienced and skilled professionals work closely with our clients 
@@ -188,30 +187,30 @@ export class App extends Component {
                         <span className="green-bold b">What</span> do we do ?
                       </div>
                       
-                      <Row gutter={16} className="pb3">
-                        <Col lg={8} md={12} sm={24}>
+                      <Row gutter={16} className="pb3" justify='center'>
+                        <Col className="pb2" lg={8} sm={18}>
                           <Row><Col><AntCloudOutlined className="icons"/></Col><Col className="pt2 pl3"><span className="f3 b">Cloud Computing & DevOps</span></Col></Row>
                           <Row><Col className="pl5 ml2 f5">Cloud computing is the delivery of computing services, including servers, storage, databases, networking, software, analytics, and intelligence, over the internet.</Col></Row>
                         </Col>
-                        <Col lg={8} md={12} sm={24}>
+                        <Col className="pb2" lg={8} sm={18}>
                           <Row><Col><AreaChartOutlined className="icons"/></Col><Col className="pt2 pl3"><span className="f3 b">Business Analytics</span></Col></Row>
                           <Row><Col className="pl5 ml2 f5">Analytics and Business Intelligence (BI) refers to the tools, technologies, and processes used to extract insights and valuable information from raw data.</Col></Row>  
                         </Col>
-                        <Col lg={8} md={12} sm={24}>
+                        <Col className="pb2" lg={8} sm={18}>
                           <Row><Col><LaptopOutlined className="icons"/></Col><Col className="pt2 pl3"><span className="f3 b">Full Stack Solutions</span></Col></Row>
                           <Row><Col className="pl5 ml2 f5">Full tech solutions refer to comprehensive services that cover all aspects of technology, from consulting and strategy to design, development, implementation, and maintenance, to address the specific needs of an organization.</Col></Row>
                         </Col>
                       </Row>
-                      <Row gutter={16} className="pb4">
-                      <Col lg={8} md={12} sm={24}>
+                      <Row gutter={16} className="pb4" justify='center'>
+                      <Col className="pb2" lg={8} sm={18}>
                         <Row><Col><ClusterOutlined className="icons"/></Col><Col className="pt2 pl3"><span className="f3 b">AI & ML</span></Col></Row>
                         <Row><Col className="pl5 ml2 f5">Artificial Intelligence (AI) and Machine Learning (ML) refer to the development and use of computer systems that can perform tasks that typically require human intelligence, including the ability to learn and adapt from experience.</Col></Row>  
                       </Col>
-                      <Col lg={8} md={12} sm={24}>
+                      <Col className="pb2" lg={8} sm={18}>
                         <Row><Col><MenuUnfoldOutlined className="icons"/></Col><Col className="pt2 pl3"><span className="f3 b">Workflow Automation</span></Col></Row>
                         <Row><Col className="pl5 ml2 f5">Our workflow automation services streamline business operations by automating repetitive tasks, reducing manual effort, and improving efficiency. We analyze processes, integrate software systems, develop custom workflows, and provide ongoing maintenance and support. </Col></Row>  
                       </Col>
-                      <Col lg={8} md={12} sm={24}>
+                      <Col className="pb2" lg={8} sm={18}>
                         <Row><Col><AuditOutlined className="icons"/></Col><Col className="pt2 pl3"><span className="f3 b">IOT Solutions</span></Col></Row>
                         <Row><Col className="pl5 ml2 f5">At our software consultancy, we offer comprehensive IoT services to help businesses integrate connected devices, sensors, and data analytics into their operations.</Col></Row>
                       </Col>
@@ -230,9 +229,9 @@ export class App extends Component {
                         <Carousel autoplay dots={false}>
                           {
                             TestimonialArray.map((testimonial) => <div>
-                              <Row align='top' justify='center'>
+                              <Row align='top' justify='center' gutter={10}>
                                 <Col lg={4}><Avatar className="ml3 shadow-1 avatar" style={{ width: '7rem', height: '7rem' }} {...testimonial.config} /></Col>
-                                <Col className="mt2" lg={19} sm={20}>
+                                <Col className="mt2 pl2 pr2" lg={19} sm={20}>
                                   <div className="test-name">{testimonial.name}</div>
                                   <div className="test-desig mb3">{testimonial.designation}<span className="pl2 pr2 f3">|</span><span className="">{testimonial.organization}</span></div>
                                   {
