@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Layout, Row, Col, Divider, Input, Button, Select, Carousel} from "antd";
+import { Layout, Row, Col, Divider, Input, Button, Select, Carousel, Image} from "antd";
 import Timeline from "./Components/Timeline/TimeLineElements";
 import Hero from "./Components/Hero";
 import Footer from "./Components/Footer";
@@ -16,6 +16,7 @@ import {
 } from "@ant-design/icons";
 import "./App.css";
 import Avatar, { genConfig } from 'react-nice-avatar'
+import Logo from './Images/Logo.png'
 
 const { Content } = Layout;
 const { TextArea } = Input;
@@ -109,9 +110,12 @@ export class App extends Component {
 
             <Layout>
               <Content>
-                  <Row>
+                  <Row justify='center'>
                   <Col lg={4} sm={0}>
                     <Timeline MoveToSection={this.handleClickScroll} section={this.state.section} ChangeSection={this.UpdateSection}/>
+                  </Col>
+                  <Col lg={0} sm={5}>
+                    <Image className="small-logo" src={Logo}/>
                   </Col>
                   {
                       this.state.section === 'home' ?
