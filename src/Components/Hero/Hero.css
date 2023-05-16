@@ -1,11 +1,11 @@
 .bckgrd{
-  background: rgb(17, 17, 17);
+  background: rgb(3,3,3);
 }
 .hero-content{
   min-width: 100vw;
   position: absolute;
   color: #bebebe;
-  top: 35%;
+  top: 30%;
   font-family: 'Work Sans', sans-serif;
   font-size: 42px;
   font-weight: 300;

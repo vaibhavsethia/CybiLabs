@@ -5,7 +5,49 @@ import { DownOutlined, RightOutlined } from "@ant-design/icons";
 import Fade from "react-reveal/Fade";
 
 import "./Hero.css";
-import { Link } from "react-router-dom";
+
+const HeroQuote = [
+  <div>
+    <Fade left big cascade>
+      Turn your <span className="hero-content-2">Ideas</span>
+    </Fade>
+    <Fade right big cascade>
+      into reality !
+    </Fade>
+  </div>,
+  <div>
+    <Fade left big cascade>
+      Innovative solutions for a 
+    </Fade>
+    <Fade right big cascade>
+      <span className="hero-content-2">Better tomorrow!</span>
+    </Fade>
+  </div>,
+  <div>
+    <Fade left big cascade>
+      Change to <span className="hero-content-2">Streamline</span>
+    </Fade>
+    <Fade right big cascade>
+      your tech operations !
+    </Fade>
+  </div>,
+  <div>
+    <Fade left big cascade>
+      Enabling Tech <span className="hero-content-2">Transformations</span>
+    </Fade>
+    <Fade right big cascade>
+      for your business.
+    </Fade>
+  </div>,
+  <div>
+    <Fade left big cascade>
+      Innovating <span className="hero-content-2">Beyond</span>
+    </Fade>
+    <Fade right big cascade>
+      Horizon.      
+    </Fade>
+  </div>
+]
 
 export class Hero extends Component {
   render() {
@@ -18,10 +60,10 @@ export class Hero extends Component {
             particles: {
               color: '#3f918d',
               number: {
-                value: 300,
+                value: 400,
                 density: {
                   enable: true,
-                  value_area: 1500,
+                  value_area: 1200,
                 },
               },
               line_linked: {
@@ -33,7 +75,7 @@ export class Hero extends Component {
                 speed: 0.6,
               },
               size: {
-                value: 1,
+                value: 1.5,
               },
               opacity: {
                 anim: {
@@ -60,14 +102,9 @@ export class Hero extends Component {
           }}
         />
         <div className="hero-content tc">
-          <Fade left big cascade>
-            Turn your <span className="hero-content-2">Ideas</span>
-          </Fade>
-          <Fade right big cascade>
-            into reality !
-          </Fade>
+          {HeroQuote[Math.floor(Math.random()*5)]}
           <Button onClick={() => this.props.MoveToSection('about-section')} >
-            <span className="button-text">This is how ?</span>
+            <span className="button-text">Learn More </span>
             <RightOutlined className="button-right" />
             <DownOutlined className="button-down" />
           </Button>

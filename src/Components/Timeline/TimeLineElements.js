@@ -10,7 +10,8 @@ import { Image, Tooltip } from "antd";
 import {
   CustomerServiceOutlined,
   LaptopOutlined,
-  HomeOutlined
+  HomeOutlined,
+  BookOutlined
 } from "@ant-design/icons";
 import Fade from "react-reveal/Fade";
 import Zoom from 'react-reveal/Zoom';
@@ -63,6 +64,20 @@ export default function CustomizedTimeline(props) {
                   <Tooltip placement="right" title={"Services"}>
                     <TimelineDot onClick={() => props.MoveToSection('service-section')} className="timeline-icon">
                     <LaptopOutlined className=""/>
+                    </TimelineDot>
+                  </Tooltip>
+                </Zoom>
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent></TimelineContent>
+            </TimelineItem>
+
+            <TimelineItem>
+              <TimelineSeparator>
+                <Zoom top>
+                  <Tooltip placement="right" title={"Testimonials"}>
+                    <TimelineDot onClick={() => props.MoveToSection('testimon-section')} className="timeline-icon">
+                    <BookOutlined className=""/>
                     </TimelineDot>
                   </Tooltip>
                 </Zoom>

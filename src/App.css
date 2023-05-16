@@ -9,7 +9,7 @@
 }
 .ant-layout-sider-trigger {
   position: relative !important;
-  background: rgb(17, 17, 17) !important;
+  background: rgb(3,3,3) !important;
   transition: all 1.2s !important;
   -webkit-transition: all 1.2s !important;
   color: #bebebe !important;
@@ -36,13 +36,13 @@
 .ant-menu-dark .ant-menu-submenu-selected,
 .ant-menu-dark .ant-menu-submenu-title:hover {
   color: #bebebe !important;
-  background: rgb(17, 17, 17) !important;
+  background: rgb(3,3,3) !important;
   border-right: 2px solid #3f918d !important;
 }
 .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
   border-right: 2px solid #3f918d !important;
   background-color: black;
-  background: rgb(17, 17, 17) !important;
+  background: rgb(3,3,3) !important;
 }
 .content {
   height: 80vh;

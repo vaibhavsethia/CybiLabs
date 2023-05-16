@@ -14,10 +14,13 @@ import {
   AuditOutlined
 } from "@ant-design/icons";
 import "./App.css";
-import { Rotate } from "react-reveal";
+import Avatar, { genConfig } from 'react-nice-avatar'
 
 const { Content } = Layout;
 const { TextArea } = Input;
+
+const Maleconfig = genConfig({ sex: "man" }) 
+const Femaleconfig = genConfig({ sex: "woman" }) 
 
 export class App extends Component {
   
@@ -89,7 +92,7 @@ export class App extends Component {
                       <div className="tc pa3 mb2 header">
                         <span id="about-section" className="green-bold b">Who</span> are we ?
                       </div>
-  
+                      {/* --------------- HOME ---------------*/}
                       <p className="f3 tc">
                         Empowering your business with innovative IT solutions.
                       </p>
@@ -151,6 +154,8 @@ export class App extends Component {
                       
                       <Divider id="service-section" className="home-divider"/>
                       
+                      {/* --------------- SERVICES ---------------*/}
+
                       <div className="tc pa3 mb2 header">
                         <span className="green-bold b">What</span> do we do ?
                       </div>
@@ -183,6 +188,17 @@ export class App extends Component {
                         <Row><Col className="pl5 ml2 f5">At our software consultancy, we offer comprehensive IoT services to help businesses integrate connected devices, sensors, and data analytics into their operations.</Col></Row>
                       </Col>
                       </Row>
+
+                      <Divider id="testimon-section" className="home-divider"/>
+                      
+                      {/* --------------- TESTIMONIALS ---------------*/}
+                      <div className="tc pa3 mb2 header">
+                        <span className="green-bold b">Hear</span> from our customers
+                      </div>
+
+                      <Avatar style={{ width: '8rem', height: '8rem' }} {...Maleconfig} />
+
+                      {/* --------------- CONTACT ---------------*/}
                       <Divider className="home-divider"/>
   
                       <div className="tc pa3 mb2 header">
@@ -258,6 +274,7 @@ export class App extends Component {
                     </Col> :
                       this.state.section === 'terms' ? 
                         <Col lg={20} className="content">
+                          {/* --------------- TERMS ---------------*/}
                           <div className="tc pa3 mb2 header">
                             <span id="about-section" className="green-bold b">Terms</span> and Condition
                           </div>
@@ -295,6 +312,7 @@ export class App extends Component {
                           </div>
                         </Col>:
                           <Col lg={20} className="content">
+                            {/* --------------- POLICY ---------------*/}
                             <div className="tc pa3 mb2 header">
                               <span id="about-section" className="green-bold b">Privacy</span> Policy
                             </div>
